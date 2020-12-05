@@ -1,7 +1,7 @@
 {
   "name": "api-a4.ong",
   "version": "1.0.0",
-  "description": "\"API que armazena informações sobre os animais do abrigo, animais desaparecidos e doadores da ONG.\"",
+  "description": "API que armazena informações sobre os animais do abrigo, animais desaparecidos e doadores da ONG.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/lilianhteixeira/API-A4.ONG.git"
   },
-  "author": "\"Lílian Teixeira\"",
+  "author": "Lílian Teixeira",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lilianhteixeira/API-A4.ONG/issues"
