@@ -15,7 +15,7 @@ const doadoresSchema = new Schema ({
         required: true
     },
     valorDoacao: {
-        type: String,
+        type: Number,
         required: false
     },
     formaPagamento: {
