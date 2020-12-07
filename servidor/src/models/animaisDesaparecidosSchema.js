@@ -19,3 +19,7 @@ const animaisDesaparecidosSchema = new Schema ({
         required: true
     }
 });
+
+const desaparecidosCollections = mongoose.model("desaparecidos", animaisDesaparecidosSchema);
+
+module.exports = desaparecidosCollections;

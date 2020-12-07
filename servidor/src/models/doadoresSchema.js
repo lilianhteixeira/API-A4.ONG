@@ -27,3 +27,7 @@ const doadoresSchema = new Schema ({
         required: false
     }
 });
+
+const doadoresCollections = mongoose.model("doadores", doadoresSchema);
+
+module.exports = doadoresCollections;
