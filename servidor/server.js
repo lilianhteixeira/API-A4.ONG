@@ -1,8 +1,10 @@
 const express = require('express');
+const app = express();
+const cors = require("cors");
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-const app = express();
+
 
 /**
  * * Carregar variaveis do arquivo .env file, onde chaves de API e senhas são configuradas
@@ -21,12 +23,13 @@ mongoose.connect(process.env.DB_URI, {
     useFindAndModify: false,
     useCreateIndex: true,
     useUnifiedTopology: true
-  })
-    .then(() => console.log('MongoDB connected'))
-    .catch((err) => console.log(err))
+})
+.then(() => console.log('MongoDB connected'))
+.catch((err) => console.log(err))
 
+
+app.use(cors());
 app.use(express.json());
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
