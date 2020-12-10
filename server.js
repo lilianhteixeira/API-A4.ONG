@@ -13,10 +13,10 @@ dotenv.config();
 
 const PORT = process.env.PORT;
 
-const index = require("../servidor/src/routes/index");
-const animais = require("../servidor/src/routes/animaisRoute");
-const desaparecidos = require("../servidor/src/routes/animaisDesaparecidosRoute");
-const doadores = require("../servidor/src/routes/doadoresRoute");
+const index = require("./src/routes/index");
+const animais = require("./src/routes/animaisRoute");
+const desaparecidos = require("./src/routes/animaisDesaparecidosRoute");
+const doadores = require("./src/routes/doadoresRoute");
 
 mongoose.connect(process.env.DB_URI, {
     useNewUrlParser: true,
