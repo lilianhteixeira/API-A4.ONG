@@ -63,7 +63,7 @@ const updateAdocaoByNome = (request, response) => {
                 return response.status(500).send(error)
             }else if (abrigo){
                 return response.status(200).send({
-                    mensagem: "Campo apto para adoção atualizado com sucesso.",
+                    mensagem: "Campo apto atualizado com sucesso.",
                     abrigo
                 });
             }else {
@@ -74,26 +74,24 @@ const updateAdocaoByNome = (request, response) => {
 }
 
 const updateAdocaoById = (request, response) => {
-    const id = request.params.id;
+    const idParams = request.params.id;
     const adocaoBody = request.body;
     const update = {new:true}
 
-    animaisCollections.findOneAndUpdate(
-        id, 
+    animaisCollections.findByIdAndUpdate(
+        idParams, 
         adocaoBody, 
         update,
         (error,abrigo)=>{
 
             if(error) {
                 return response.status(500).send(error)
-            } else if (abrigo) {
+            } else {
                 return response.status(200).send({
-                    mensagem: "Campo apto para adoção atualizado com sucesso.",
+                    mensagem: "Campo atualizado com sucesso.",
                     abrigo
                 });
-            } else {
-                return response.status(404).send({mensagem: "Animal não encontrado."})
-        }
+            } 
     
     });
 }
