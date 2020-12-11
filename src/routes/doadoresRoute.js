@@ -6,7 +6,6 @@ router.get("/", controller.getAllDoadores);
 router.get("/nome/:nome", controller.getByNome); 
 router.post("/criar", controller.addDoador);
 router.patch("/atualizar/:nome", controller.updateByNome);
-router.patch("/atualizar/:id", controller.updateById);
 router.delete("/delete/:nome", controller.deleteDoadorByNome);
 
 module.exports = router;

@@ -73,31 +73,6 @@ const updateByNome = (request, response) => {
     );
 }
 
-const updateById = (request, response) => {
-    const id = request.params.id;
-    const doadorBody = request.body;
-    const update = {new:true}
-
-    doadoresCollections.findOneAndUpdate(
-        id, 
-        doadorBody, 
-        update,
-        (error,doadores)=>{
-
-            if(error) {
-                return response.status(500).send(error)
-            } else if (doadores) {
-                return response.status(200).send({
-                    mensagem: "Campo atualizado com sucesso.",
-                    doadores
-                });
-            } else {
-                return response.status(404).send({mensagem: "Doador não encontrado."})
-        }
-    
-    });
-}
-
 const deleteDoadorByNome = (request, response) => {
     const nomeParam = request.params.nome;
     const deleteBody = request.body;
@@ -122,6 +97,5 @@ module.exports = {
     addDoador,
     getByNome,
     updateByNome,
-    updateById,
     deleteDoadorByNome
 }

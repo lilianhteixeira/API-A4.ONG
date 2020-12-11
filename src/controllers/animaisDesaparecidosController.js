@@ -49,7 +49,7 @@ const addDesaparecido = (request, response) => {
     });
 }
 
-const updateTelefoneByNome = (request, response) => {
+const updateByNome = (request, response) => {
     const nomeParam = request.params.nome;
     const telefoneBody = request.body;
     const update = {new: true} 
@@ -73,30 +73,7 @@ const updateTelefoneByNome = (request, response) => {
     );
 }
 
-const updateTelefoneById = (request, response) => {
-    const id = request.params.id;
-    const telefoneBody = request.body;
-    const update = {new:true}
 
-    desaparecidosCollections.findOneAndUpdate(
-        id, 
-        telefoneBody, 
-        update,
-        (error,desaparecido)=>{
-
-            if(error) {
-                return response.status(500).send(error)
-            } else if (desaparecido) {
-                return response.status(200).send({
-                    mensagem: "Campo atualizado com sucesso.",
-                    desaparecido
-                });
-            } else {
-                return response.status(404).send({mensagem: "Animal não encontrado."})
-        }
-    
-    });
-}
 
 const deleteDesaparecidoByNome = (request, response) => {
     const nomeParam = request.params.nome;
@@ -121,7 +98,6 @@ module.exports = {
     getAllDesaparecidos,
     addDesaparecido,
     getByNome,
-    updateTelefoneByNome,
-    updateTelefoneById,
+    updateByNome,
     deleteDesaparecidoByNome
 }

@@ -73,31 +73,6 @@ const updateAdocaoByNome = (request, response) => {
     );
 }
 
-const updateAdocaoById = (request, response) => {
-    const id = request.params.id;
-    const adocaoBody = request.body;
-    const update = {new:true}
-
-    animaisCollections.findOneAndUpdate(
-        {id: id}, 
-        adocaoBody, 
-        update,
-        (error,abrigo)=>{
-
-            if(error) {
-                return response.status(500).send(error)
-            } else if (abrigo) {
-                return response.status(200).send({
-                    mensagem: "Campo atualizado com sucesso.",
-                    abrigo
-                });
-            } else {
-                return response.status(404).send({mensagem: "Animal não encontrado."})
-        }
-    
-    });
-}
-
 const deleteAbrigoByNome = (request, response) => {
     const nomeParam = request.params.nome;
     const deleteBody = request.body;
@@ -122,6 +97,5 @@ module.exports = {
     addAbrigo,
     getByNome,
     updateAdocaoByNome,
-    updateAdocaoById,
     deleteAbrigoByNome
 }
