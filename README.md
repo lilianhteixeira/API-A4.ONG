@@ -119,13 +119,13 @@ Para a consturição do projeto, as seguintes tecnologias foram utilizadas:
 - [JavaScript](https://www.javascript.com/)
 - [Git/Github](https://github.com/)
 - [Node.js](https://nodejs.org/en/)
-- [MongoDb](https://www.mongodb.com/)
+- [MongoDB](https://www.mongodb.com/)
 - [Mongoose](https://mongoosejs.com/)
 - [Nodemon](https://nodemon.io/)
 - [Express](https://expressjs.com/pt-br/)
-- [dotenv](https://www.npmjs.com/package/dotenv)
-- [cors](https://www.npmjs.com/package/cors)
-- [heroku](https://dashboard.heroku.com/apps)
+- [Dotenv](https://www.npmjs.com/package/dotenv)
+- [Cors](https://www.npmjs.com/package/cors)
+- [Heroku](https://dashboard.heroku.com/apps)
 
 ### Features
 
