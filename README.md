@@ -28,13 +28,13 @@ Descrição completa do projeto, em [A4.ONG](/assets/api-a4ong.pdf).
 
 ## Objetivos
 
-- Mapeamento do perfil e necessidades dos refugiados através de cadastros na API;
-- Desenvolvimento de uma rede de apoio mútuo entre refugiados, sociedade civil, ONGs, empresas através de cadastros;
-- Auxiliar no fomento de políticas públicas a partir dos dados obtidos;
+- Mapeamento das necessidades dos animais do abrigo e das pessoas que doam ou são voluntárias através de cadastros na API;
+- Desenvolvimento de uma rede de apoio ás pessoas que trabalham no abrigo através dos dados obtidos pela API;
+- Auxiliar na divulgação da ONG e dos projetos que ela abraça.
 
 ## Aprendizados
 
-Para a execução do projeto final, desenvolvemos uma API fundamentada no modelo que utiliza quatro operações básicas, que são:  CREATE (CRIAR), READ(LER-CONSULTA), UPDATE(ATUALIZAR) e DELETE(DESTRUIÇÃO). Dessa forma podemos trabalhar com as informações dispostas em um banco de dados NoSQL. Para acessar e tratar as operações, o código foi organizado em uma Arquitetura embasada no sistema Model View Controller (MVC).
+Para a execução do projeto final, foi desenvolvida uma API fundamentada no modelo CRUD que faz uso de quatro operações básicas, que são:  CREATE (CRIAR), READ(LER/CONSULTA), UPDATE(ATUALIZAR) e DELETE(DESTRUIÇÃO). O código foi organizado utilizando a Arquitetura com base no sistema Model View Controller (MVC), e para trabalhar com as informações foi usado um banco de dados NoSQL. 
 
 ## Arquitetura
 
@@ -84,7 +84,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e o database NoSQL [Mongodb](https://www.mongodb.com/)
 Além disto é bom ter um editor para trabalhar com o código, recomento o [VSCode](https://code.visualstudio.com/)
 
-### Rodando o Back End 
+### Rodando o Back-end 
 
 Server Local
 
